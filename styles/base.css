@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --color-dark: #222;
+  --color-darker: #1a1a1a;
+  --color-light: #ddd;
+  --color-player-1: cornflowerblue;
+  --color-player-2: coral;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#tank-game {
+  min-height: 100vh;
+  font-family: "Vazirmatn";
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 2.5rem;
+}

@@ -1,4 +1,4 @@
-const $ = e => document.querySelectorAll(e)
+const $ = (e) => document.querySelectorAll(e);
 
 class TankGame {
   constructor(parent, state) {
@@ -38,51 +38,54 @@ class TankGame {
         D2: { hasTank: true, isTankDead: true },
         D3: { hasTank: true, isTankDead: false },
         D4: { hasTank: false, isTankDead: false },
-      }
-    }
-    this.parent = parent
-    this.renderGame()
+      },
+    };
+    this.parent = parent;
+    this.renderGame();
   }
   renderGame = () => {
-    this.parent.innerHTML = ''
-    this.parent.innerHTML += this.createGrid('🟦', this.state.blue)
-    this.parent.innerHTML += this.createGrid('🟥', this.state.red)
-  
-    $('.grid').forEach(grid => grid.addEventListener('click', this.handleGridClick))
-  }
+    this.parent.innerHTML = ``;
+    this.parent.innerHTML += this.createGrid(`🟦`, this.state.blue);
+    this.parent.innerHTML += this.createGrid(`🟥`, this.state.red);
+
+    $(`.grid`).forEach((grid) =>
+      grid.addEventListener(`click`, this.handleGridClick)
+    );
+  };
   handleGridClick = (e) => {
-    const targetAddress = e.target.getAttribute('data-address')
-    const targetColor = e.target.parentElement
-  
-    if (targetColor === $('#🟦')[0]) this.destroyTank('red', targetAddress)
-    if (targetColor === $('#🟥')[0]) this.destroyTank('blue', targetAddress)
-  } 
+    const targetAddress = e.target.getAttribute(`data-address`);
+    const targetColor = e.target.parentElement;
+
+    if (targetColor === $(`#🟦`)[0]) this.destroyTank(`red`, targetAddress);
+    if (targetColor === $(`#🟥`)[0]) this.destroyTank(`blue`, targetAddress);
+  };
   createGrid = (id, gridState) => {
-    let finalGrid = `<div class="grid" id="${id}">\n`
+    let finalGrid = `<div class="grid" id="${id}">\n`;
 
     for (const cellAddr in gridState) {
-      const relatedCell = gridState[cellAddr]
-      finalGrid += '\t'
-      finalGrid += `<div class="cell" data-address="${cellAddr}">`
-      finalGrid += (!relatedCell.hasTank) ? '' : ((!relatedCell.isTankDead) ? id : '💀')
-      finalGrid += `</div>`
-      finalGrid += '\n'
+      const relatedCell = gridState[cellAddr];
+      finalGrid += `\t`;
+      finalGrid += `<div class="cell" data-address="${cellAddr}">`;
+      finalGrid += relatedCell.hasTank
+        ? relatedCell.isTankDead
+          ? `💀`
+          : id
+        : ``;
+      finalGrid += `</div>`;
+      finalGrid += `\n`;
     }
-  
-    finalGrid += `</div>`
-    return finalGrid
-  }
+
+    finalGrid += `</div>`;
+    return finalGrid;
+  };
   destroyTank = (player, address) => {
-    this.state[player][address].isTankDead = true
-    this.renderGame()
-  }
+    this.state[player][address].isTankDead = true;
+    this.renderGame();
+  };
 }
 
-const tankGame1 = new TankGame($('#tank-game')[0]);
-$('#game-version')[0].innerText = 'v1.0.0'
-$('#start-btn')[0].addEventListener('click', () => {
-  $('#welcome-screen')[0].classList.add('hidden')
-  setTimeout(() => {
-    $('#welcome-screen')[0].remove()
-  }, 500)
-})
+const tankGame1 = new TankGame($(`#tank-game`)[0]);
+$(`#game-version`)[0].innerText = `v1.0.0`;
+$(`#start-btn`)[0].addEventListener(`click`, () => {
+  $(`#welcome-screen`)[0].classList.add(`hidden`);
+});

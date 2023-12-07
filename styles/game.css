@@ -1,0 +1,25 @@
+#tank-game {
+  background: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.grid {
+  background-color: var(--color-light);
+  background: var(--color-dark);
+  color: var(--player-color);
+  display: grid;
+  flex: 1;
+  gap: 0.1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+#🟦 {
+  transform: rotateX(180deg);
+}
+/* #🟥 {} */
+.cell {
+  background-color: var(--color-light);
+  display: grid;
+  place-items: center;
+}
