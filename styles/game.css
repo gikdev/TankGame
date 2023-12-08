@@ -1,4 +1,5 @@
 #tank-game {
+  min-height: 100vh;
   background: var(--color-dark);
   display: flex;
   flex-direction: column;
@@ -18,7 +19,7 @@
   transform: rotateX(180deg);
 }
 /* #🟥 {} */
-.cell {
+.grid__cell {
   background-color: var(--color-light);
   display: grid;
   place-items: center;

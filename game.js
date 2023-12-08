@@ -65,7 +65,7 @@ class TankGame {
     for (const cellAddr in gridState) {
       const relatedCell = gridState[cellAddr];
       finalGrid += `\t`;
-      finalGrid += `<div class="cell" data-address="${cellAddr}">`;
+      finalGrid += `<div class="grid__cell" data-address="${cellAddr}">`;
       finalGrid += relatedCell.hasTank
         ? relatedCell.isTankDead
           ? `💀`

@@ -13,8 +13,7 @@
   font-family: "Vazirmatn", sans-serif;
 }
 html,
-body,
-#tank-game {
+body {
   min-height: 100vh;
 }
 html {
@@ -23,6 +22,11 @@ html {
 body {
   font-size: 2.5rem;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
