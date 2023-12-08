@@ -16,7 +16,7 @@
   opacity: 0;
   height: 0;
   width: 0;
-  font-size: 0rem;
+  font-size: 0;
 }
 .screen__content {
   display: flex;

@@ -85,7 +85,7 @@ class TankGame {
 }
 
 const tankGame1 = new TankGame($(`#tank-game`)[0]);
-$(`#game-version`)[0].innerText = `v1.0.1`;
+$(`#game-version`)[0].innerText = `v1.0.2`;
 $(`#start-btn`)[0].addEventListener(`click`, () => {
   $(`#welcome-screen`)[0].classList.add(`hidden`);
 });
