@@ -2,5 +2,5 @@
   "breadcrumbs.enabled": false,
   "workbench.statusBar.visible": true,
   "editor.lineNumbers": "off",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": false
 }
