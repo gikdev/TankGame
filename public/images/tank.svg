@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="150px" height="250px" viewBox="0 0 150 250" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M150 0L150 0L150 250L0 250L0 0L150 0Z" id="path_1" />
+    <path d="M130 70C141.047 70 150 78.9528 150 90L150 230C150 241.047 141.047 250 130 250L20 250C8.9528 250 0 241.047 0 230L0 90C0 78.9528 8.9528 70 20 70L130 70Z" id="path_2" />
+    <path d="M55 0L95 0L95 120L55 120L55 0Z" id="path_3" />
+    <path d="M75 100C108.142 100 135 126.858 135 160L135 160C135 193.142 108.142 220 75 220L75 220C41.8584 220 15 193.142 15 160L15 160C15 126.858 41.8584 100 75 100Z" id="path_4" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+    <clipPath id="clip_2">
+      <use xlink:href="#path_2" />
+    </clipPath>
+    <clipPath id="clip_3">
+      <use xlink:href="#path_3" />
+    </clipPath>
+    <clipPath id="clip_4">
+      <use xlink:href="#path_4" />
+    </clipPath>
+  </defs>
+  <g id="Tank" clip-path="url(#clip_1)">
+    <path d="M150 0L150 0L150 250L0 250L0 0L150 0Z" id="Tank" fill="none" stroke="none" />
+    <g id="Rectangle">
+      <use stroke="none" fill="#A6A6A6" xlink:href="#path_2" />
+      <g clip-path="url(#clip_2)">
+        <use xlink:href="#path_2" fill="none" stroke="#000000" stroke-width="20" />
+      </g>
+    </g>
+    <g id="Rectangle-Copy">
+      <use stroke="none" fill="#999999" xlink:href="#path_3" fill-rule="evenodd" />
+      <g clip-path="url(#clip_3)">
+        <use xlink:href="#path_3" fill="none" stroke="#000000" stroke-width="20" />
+      </g>
+    </g>
+    <g id="Rectangle-2">
+      <use stroke="none" fill="#999999" xlink:href="#path_4" />
+      <g clip-path="url(#clip_4)">
+        <use xlink:href="#path_4" fill="none" stroke="#000000" stroke-width="20" />
+      </g>
+    </g>
+  </g>
+</svg>

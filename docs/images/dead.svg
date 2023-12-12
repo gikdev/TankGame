@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="150px" height="250px" viewBox="0 0 150 250" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M150 0L150 0L150 250L0 250L0 0L150 0Z" id="path_1" />
+    <path d="M95 10C111.571 10 125 23.4292 125 40L125 210L25 210L25 40C25 23.4292 38.4292 10 55 10L95 10Z" id="path_2" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+    <clipPath id="clip_2">
+      <use xlink:href="#path_2" />
+    </clipPath>
+  </defs>
+  <g id="Dead" clip-path="url(#clip_1)">
+    <path d="M150 0L150 0L150 250L0 250L0 0L150 0Z" id="Dead" fill="none" stroke="none" />
+    <g id="Rectangle">
+      <use stroke="none" fill="#BFBFBF" xlink:href="#path_2" />
+      <g clip-path="url(#clip_2)">
+        <use xlink:href="#path_2" fill="none" stroke="#000000" stroke-width="20" />
+      </g>
+    </g>
+    <path d="M0 230L150 230L150 250L0 250L0 230Z" id="Rectangle-2" fill="#000000" fill-rule="evenodd" stroke="none" />
+    <path d="M10 210L140 210L140 230L10 230L10 210Z" id="Rectangle-2-Copy" fill="#000000" fill-rule="evenodd" stroke="none" />
+    <path d="M45 63L105 63L105 73L45 73L45 63Z" id="Rectangle" fill="#000000" fill-rule="evenodd" stroke="none" />
+    <path d="M70 31L80 31L80 131L70 131L70 31Z" id="Rectangle-Copy" fill="#000000" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>

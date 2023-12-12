@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Vazirmatn", sans-serif;
+  cursor: url("/images/cursor.png"), auto;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: $color-lighter;
+  background-color: $color-darker;
+}
+h1 {
+  text-align: center;
+}
+button, input, .grid__cell, .tank {
+  cursor: url('/images/pointer.png'), pointer !important;
+}

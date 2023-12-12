@@ -1,0 +1,20 @@
+@keyframes showInGoOut {
+  0% {
+    top: -20rem;
+    right: 90%;
+  }
+  10% {
+    top: 2rem;
+    right: 80%;
+    left: 0;
+  }
+  90% {
+    top: 2rem;
+    right: 0;
+    left: 80%;
+  }
+  100% {
+    top: -20rem;
+    right: 90%;
+  }
+}

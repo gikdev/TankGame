@@ -1,0 +1,83 @@
+@import "utils";
+
+.modal {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transition: all 500ms;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  opacity: 1;
+  direction: rtl;
+  background-color: $color-darker;
+  
+  &.hidden {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    font-size: 0;
+    z-index: -9;
+  }
+  &__content {
+    padding: 2rem 3rem;
+    color: $color-light;
+    background-color: $color-dark;
+    line-height: 2;
+    border-radius: 1rem;
+  }
+}
+
+.btn {
+  padding: 1.5rem 3rem;
+  direction: rtl;
+  color: $color-light;
+  border: 2px solid $color-light;
+  background: transparent;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 200ms;
+  cursor: url('/images/pointer.png'), pointer;
+  
+  &:hover {
+    background: $color-light;
+    color: $color-dark;
+  }
+  &--fw { width: 100%; }
+  &:active { transform: scale(0.9); }
+  &:disabled {
+    cursor: not-allowed !important;
+    color: gray !important;
+    border-color: gray !important;
+
+    &:hover { background: inherit; }
+    &:active { transform: scale(1); }
+  }
+}
+
+.toast {
+  position: absolute;
+  top: -20rem;
+  right: 0rem;
+  left: 0rem;
+  text-align: center;
+  padding: 2rem 0;
+  width: 15rem;
+  transition: all 200ms;
+  direction: rtl;
+  border-radius: 1rem;
+  z-index: 100;
+
+  &.show {
+    animation: showInGoOut 3000ms 1 linear;
+  }
+  &.red {
+    background-color: $color-player-2;
+  }
+  &.blue {
+    background: $color-player-1;
+  }
+}
