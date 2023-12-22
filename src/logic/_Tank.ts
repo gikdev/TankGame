@@ -1,6 +1,6 @@
-import redTank from '/images/red-tank.svg'
-import blueTank from '/images/blue-tank.svg'
-import deadTank from '/images/dead.svg'
+import redTank from "/images/red-tank.svg";
+import blueTank from "/images/blue-tank.svg";
+import deadTank from "/images/dead.svg";
 
 export default class Tank {
   #isDead: boolean = false;
@@ -10,15 +10,17 @@ export default class Tank {
   constructor(color = ``) {
     this.#color = color;
     this.#cell.classList.add(`tank`);
-    if (this.#color === `red`)
-      this.#cell.src = redTank;
-    if (this.#color === `blue`)
-      this.#cell.src = blueTank;
+    if (this.#color === `red`) this.#cell.src = redTank;
+    if (this.#color === `blue`) this.#cell.src = blueTank;
   }
+
+  /**
+   * Destroys the tank by changing it's image to a gravestone and setting it's `isDead` to `true`
+   */
   destroy = () => {
     this.#cell.src = deadTank;
     this.#isDead = true;
-  }
+  };
 
   public get position(): string {
     return this.#cell.parentElement?.getAttribute(`data-address`)!;

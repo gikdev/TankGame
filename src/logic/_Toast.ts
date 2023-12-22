@@ -16,9 +16,12 @@ export default class Toast {
     this.#toast.classList.add(this.#winnerColor);
   }
 
+  /**
+   * Shows the toast up, then after specified time makes the toast disappear
+   */
   show() {
     document.body.append(this.#toast);
     this.#toast.classList.add("show");
-    setTimeout(() => this.#toast.remove(), this.#time)
+    setTimeout(() => this.#toast.remove(), this.#time);
   }
 }

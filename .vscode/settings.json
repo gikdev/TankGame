@@ -1,6 +1,7 @@
 {
   "breadcrumbs.enabled": false,
   "workbench.statusBar.visible": true,
-  "editor.lineNumbers": "off",
-  "editor.formatOnSave": false
+  "editor.lineNumbers": "on",
+  "editor.formatOnSave": false,
+  "editor.minimap.enabled": false
 }
