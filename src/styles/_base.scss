@@ -12,6 +12,7 @@ body {
 }
 html {
   font-size: 62.5%;
+  padding: 5rem;
 }
 body {
   display: grid;
@@ -24,6 +25,16 @@ body {
 h1 {
   text-align: center;
 }
-button, input, .grid__cell, .tank {
+button, input, .grid__cell, .tank, a {
   cursor: url('/images/pointer.png'), pointer !important;
+}
+a {
+  cursor: pointer;
+
+  &:link, &:visited {
+    color: $color-player-1;
+  }
+  &:hover, &:active {
+    color: $color-player-2;
+  }
 }
