@@ -2,7 +2,7 @@ import "../styles/main.scss";
 import { $, GameMode } from "./_utils";
 import Game from "./_Game";
 
-const tankGame = new Game($(`#🎮`)[0], 2);
+const tankGame = new Game($(`#🎮`)[0], 5);
 
 $(`#start-btn`)[0].addEventListener(`click`, () => {
   $(`#👞`)[0].classList.add(`hidden`);
